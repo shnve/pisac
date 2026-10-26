@@ -64,7 +64,7 @@ El ecosistema **PISAC** está compuesto por los siguientes módulos:
 
 ## 5. Reconocimiento de Código Abierto
 
-**PISAC** toma como base tecnológica los componentes de código abierto del proyecto **PING** desarrollado originalmente por el **SHOM (*Service Hydrographique et Océanographique de la Marine* - Francia)** bajo licencia **MIT**, incorporando las adaptaciones hidrográficas, cartográficas, lingüísticas y operativas propias del **Servicio de Hidrografía y Navegación (SHN Venezuela)**.
+**PISAC** toma como base tecnológica los componentes de código abierto del proyecto **PING** desarrollado originalmente por el **SHOM (*Service Hydrographique et Océanographique de la Marine* - Francia)** bajo licencia **MIT**, incorporando las adaptaciones hidrográficas, cartográficas, lingüísticas y operativas propias del **Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela)**.
 
 ---
 

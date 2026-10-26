@@ -18,7 +18,7 @@ La plataforma materializa la transición tecnológica del SHN hacia el marco uni
 - **Cumplimiento del Estándar Internacional IHO S-124:**
   Estructuración normalizada de avisos náuticos, series nacionales y costeras, categorías generales de peligro y tipos específicos de advertencia conforme al catálogo de objetos S-124.
 - **Visor Cartográfico Náutico Interactivo:**
-  Integración directa con la cartografía náutica oficial del SHN Venezuela (encuadres costeros, regionales y oceánicos) mediante servicios geoespaciales estándar (**WMTS / WMS / WFS** y **Cloud Optimized GeoTIFF - COG**).
+  Integración directa con la cartografía náutica oficial del SHN Venezuela mediante servicios geoespaciales estándar (**WMTS / WMS / WFS** y **Cloud Optimized GeoTIFF - COG**).
 - **Gestión Integral del Ciclo de Vida de Avisos:**
   Creación asistida de geometrías náuticas (puntos, líneas, polígonos y áreas predefinidas en `EPSG:4326`), cruce espacial automático con zonas marítimas y cartas náuticas afectadas, control de vigencia y cancelación de avisos en vigor.
 - **Difusión Multicanal y Bilingüe (ES / EN):**

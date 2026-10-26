@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.angular/
+*.tar.gz
+*.class
+Test.java
+package.json
+package-lock.json

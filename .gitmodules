@@ -1,0 +1,9 @@
+[submodule "ping-api"]
+	path = ping-api
+	url = https://github.com/shnve/ping-api.git
+[submodule "ping-web"]
+	path = ping-web
+	url = https://github.com/shnve/ping-web.git
+[submodule "docs-internos"]
+	path = docs-internos
+	url = https://github.com/shnve/pisac-docs.git

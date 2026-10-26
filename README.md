@@ -1,7 +1,7 @@
 # PISAC — Plataforma de Información de Seguridad Acuática
 
 **Servicio de Hidrografía y Navegación (SHN Venezuela)**  
-*Oficina Coordinadora de Hidrografía y Navegación (OCHINA)*
+*Oficina Coordinadora de Hidrografía y Navegación (OCHINA Venezuela)*
 
 ---
 

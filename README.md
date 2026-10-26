@@ -7,7 +7,7 @@
 
 ## 1. Descripción General
 
-**PISAC** (**Plataforma de Información de Seguridad Acuática**) es el sistema tecnológico institucional desarrollado e implementado por el **Servicio de Hidrografía y Navegación (SHN)** de la República Bolivariana de Venezuela para la gestión, producción, publicación y difusión de **Avisos a los Navegantes** y **Advertencias Náuticas** en los espacios acuáticos bajo jurisdicción nacional.
+**PISAC** (**Plataforma de Información de Seguridad Acuática**) es el sistema tecnológico institucional desarrollado e implementado por el **Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN)** de la República Bolivariana de Venezuela para la gestión, producción, publicación y difusión de **Avisos a los Navegantes** y **Advertencias Náuticas** en los espacios acuáticos bajo jurisdicción nacional.
 
 La plataforma materializa la transición tecnológica del SHN hacia el marco universal **S-100** de la **Organización Hidrográfica Internacional (OHI / IHO)**, implementando de forma nativa la especificación de producto **IHO S-124 (*Navigational Warnings*)**.
 

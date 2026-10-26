@@ -70,7 +70,7 @@ El ecosistema **PISAC** está compuesto por los siguientes módulos:
 
 ## 6. Contacto Institucional
 
-- **Institución:** Servicio de Hidrografía y Navegación (SHN Venezuela) — Playa Grande, La Guaira, Venezuela.
+- **Institución:** Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela) — Playa Grande, La Guaira, Venezuela.
 - **Pagina Web:** `www.shn.gob.ve`
 - **Correo Técnico:** `shnti@shn.gob.ve`
 - **Organización GitHub:** [https://github.com/shnve](https://github.com/shnve)

@@ -62,9 +62,11 @@ El ecosistema **PISAC** está compuesto por los siguientes módulos:
 
 ---
 
-## 5. Reconocimiento de Código Abierto
+## 5. Reconocimiento de Código Abierto y Licenciamiento
 
-**PISAC** toma como base tecnológica los componentes de código abierto del proyecto **PING** desarrollado originalmente por el **SHOM (*Service Hydrographique et Océanographique de la Marine* - Francia)** bajo licencia **MIT**, incorporando las adaptaciones hidrográficas, cartográficas, lingüísticas y operativas propias del **Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela)**.
+**PISAC** toma como base tecnológica los componentes de código abierto del proyecto **PING** desarrollado originalmente por el **SHOM (*Service Hydrographique et Océanographique de la Marine* - Francia)** bajo la **Licencia Pública de la Unión Europea (EUPL v1.2)** ([texto oficial EUPL](https://interoperable-europe.ec.europa.eu/collection/eupl/eupl-text-eupl-12)).
+
+El proyecto incorpora las adaptaciones hidrográficas, cartográficas, lingüísticas y operativas propias del **Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela)**, preservando los derechos y avisos de autoría originales (© Shom, 2020–2025) y distribuyéndose de conformidad con los términos de reciprocidad y apertura de la licencia **EUPL v1.2**.
 
 ---
 

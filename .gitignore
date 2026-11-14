@@ -6,3 +6,5 @@ dist/
 Test.java
 package.json
 package-lock.json
+# Configuración local del agente de IA (no es parte del proyecto)
+.agyignore

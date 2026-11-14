@@ -1,78 +1,75 @@
 # PISAC — Plataforma de Información de Seguridad Acuática
 
-**Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela)**  
+**Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela)**
 *Oficina Coordinadora de Hidrografía y Navegación (OCHINA Venezuela)*
 
 ---
 
-## 1. Descripción General
+## 1. Descripción general
 
-**PISAC** (**Plataforma de Información de Seguridad Acuática**) es el sistema tecnológico institucional desarrollado e implementado por el **Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN)** de la República Bolivariana de Venezuela para la gestión, producción, publicación y difusión de **Avisos a los Navegantes** y **Advertencias Náuticas** en los espacios acuáticos bajo jurisdicción nacional.
+**PISAC** es el sistema institucional del **SHN** de la República Bolivariana de Venezuela para la producción, publicación y difusión de **advertencias náuticas** y **avisos a los navegantes** en los espacios acuáticos bajo jurisdicción nacional.
 
-La plataforma materializa la transición tecnológica del SHN hacia el marco universal **S-100** de la **Organización Hidrográfica Internacional (OHI / IHO)**, implementando de forma nativa la especificación de producto **IHO S-124 (*Navigational Warnings*)**.
-
----
-
-## 2. Alcance y Capacidades Principales
-
-- **Cumplimiento del Estándar Internacional IHO S-124:**
-  Estructuración normalizada de avisos náuticos, series nacionales y costeras, categorías generales de peligro y tipos específicos de advertencia conforme al catálogo de objetos S-124.
-- **Visor Cartográfico Náutico Interactivo:**
-  Integración directa con la cartografía náutica oficial del SHN Venezuela mediante servicios geoespaciales estándar (**WMTS / WMS / WFS** y **Cloud Optimized GeoTIFF - COG**).
-- **Gestión Integral del Ciclo de Vida de Avisos:**
-  Creación asistida de geometrías náuticas (puntos, líneas, polígonos y áreas predefinidas en `EPSG:4326`), cruce espacial automático con zonas marítimas y cartas náuticas afectadas, control de vigencia y cancelación de avisos en vigor.
-- **Difusión Multicanal y Bilingüe (ES / EN):**
-  Generación automatizada de boletines oficiales en formato **PDF** institucional, redacción estandarizada de mensajes **TELEX / NAVTEX** en español e inglés, e interoperabilidad máquina a máquina mediante **GML S-124** e interfaces **SECOM**.
-- **Administración de Cartografía Náutica:**
-  Módulo integrado para la validación geoespacial, reproyección automática (GDAL) y publicación continua de cartas náuticas raster en el servidor cartográfico institucional.
+La plataforma forma parte de la transición del SHN al marco **S-100** de la **Organización Hidrográfica Internacional (OHI / IHO)**. Implementa la especificación de producto **IHO S-124 (*Navigational Warnings*)**.
 
 ---
 
-## 3. Estructura del Proyecto y Repositorios
+## 2. Capacidades principales
 
-El ecosistema **PISAC** está compuesto por los siguientes módulos:
+- **Estándar IHO S-124:** series nacionales y costeras, categorías de peligro y tipos de advertencia conforme al catálogo S-124, con la terminología náutica del SHN en español.
+- **Visor cartográfico náutico:** consulta de advertencias, avisos y regulaciones sobre la cartografía náutica oficial del SHN, mediante servicios geoespaciales estándar (WMTS / WMS) y un mapa base propio.
+- **Ciclo de vida de los avisos:** creación asistida con su geometría, identificación de las zonas y cartas náuticas afectadas, control de vigencia y cancelación.
+- **Difusión multicanal y bilingüe (ES / EN):** boletines en PDF, mensajes TELEX / NAVTEX normalizados, intercambio entre sistemas en GML S-124 mediante el servicio **SECOM** (IEC 63173-2) y notificaciones por correo electrónico.
+- **Participación del usuario marítimo:** suscripciones por zona y envío de reportes al SHN.
+- **Gestión institucional:** administración de organismos, zonas de responsabilidad, usuarios y cartografía náutica.
+
+---
+
+## 3. Repositorios
 
 | Componente | Repositorio | Descripción |
 | :--- | :--- | :--- |
-| **Repositorio Principal** | [`shnve/pisac`](https://github.com/shnve/pisac) | Repositorio integrador del proyecto PISAC, arquitectura general y referencias a submódulos. |
-| **Motor Backend (API)** | [`shnve/ping-api`](https://github.com/shnve/ping-api) | Servicios RESTful, modelo de datos S-124, motor geoespacial PostGIS, integración GDAL/GeoServer y generación GML/PDF (Java / Spring Boot). |
-| **Portal Web (Frontend)** | [`shnve/ping-web`](https://github.com/shnve/ping-web) | Interfaz web para el público marítimo y consola administrativa del SHN con visor SIG interactivo (Angular / OpenLayers). |
-| **Documentación Interna** | [`shnve/pisac-docs`](https://github.com/shnve/pisac-docs) *(Privado)* | Submódulo de acceso restringido al personal autorizado del SHN (matrices operativas, guías de despliegue y procedimientos internos). |
+| **Repositorio principal** | [`shnve/pisac`](https://github.com/shnve/pisac) | Integra el proyecto y referencia los submódulos. |
+| **Backend (API)** | [`shnve/ping-api`](https://github.com/shnve/ping-api) | Servicios REST, modelo de datos S-124, procesamiento geoespacial y generación de productos (Java / Spring Boot). |
+| **Portal web** | [`shnve/ping-web`](https://github.com/shnve/ping-web) | Portal público y consola de administración con visor cartográfico (Angular / OpenLayers). |
+| **Documentación interna** | `shnve/pisac-docs` *(privado)* | Uso exclusivo del personal autorizado del SHN. |
 
----
-
-## 4. Arquitectura Tecnológica
-
-```
-┌───────────────────────────────────────────────────────────────────────────┐
-│                   PISAC - Portal Web (shnve/ping-web)                     │
-│                Angular + OpenLayers + Visor Náutico S-124                 │
-└─────────────────────────────────────┬─────────────────────────────────────┘
-                                      │ HTTPS / REST / OIDC
-┌─────────────────────────────────────▼─────────────────────────────────────┐
-│                  PISAC - Backend API (shnve/ping-api)                     │
-│          Spring Boot + Hibernate Spatial + Liquibase + GDAL COG           │
-└───────┬─────────────────────────────┬─────────────────────────────┬───────┘
-        │                             │                             │
-┌───────▼────────┐           ┌────────▼────────┐           ┌────────▼───────┐
-│ PostgreSQL +   │           │   GeoServer     │           │   Keycloak     │
-│    PostGIS     │           │  (WMTS / WMS)   │           │  (SSO / OIDC)  │
-└────────────────┘           └─────────────────┘           └────────────────┘
+```bash
+git clone --recurse-submodules https://github.com/shnve/pisac.git
 ```
 
 ---
 
-## 5. Reconocimiento de Código Abierto y Licenciamiento
+## 4. Arquitectura general
 
-**PISAC** toma como base tecnológica los componentes de código abierto del proyecto **PING** desarrollado originalmente por el **SHOM (*Service Hydrographique et Océanographique de la Marine* - Francia)** bajo la **Licencia Pública de la Unión Europea (EUPL v1.2)** ([texto oficial EUPL](https://interoperable-europe.ec.europa.eu/collection/eupl/eupl-text-eupl-12)).
+```mermaid
+flowchart LR
+    SHN["SHN y organismos<br/>emiten los avisos"] --> WEB
+    NAV["Navegantes y<br/>sector marítimo"] <--> WEB
 
-El proyecto incorpora las adaptaciones hidrográficas, cartográficas, lingüísticas y operativas propias del **Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela)**, preservando los derechos y avisos de autoría originales (© Shom, 2020–2025) y distribuyéndose de conformidad con los términos de reciprocidad y apertura de la licencia **EUPL v1.2**.
+    subgraph PISAC["PISAC"]
+        WEB["Portal web<br/>(Angular + OpenLayers)"] --> API["Backend API<br/>(Spring Boot)"]
+        API --> DB[("Base de datos<br/>geoespacial<br/>PostgreSQL + PostGIS")]
+        API --> MAP["Servidor<br/>cartográfico<br/>GeoServer"]
+        WEB --> MAP
+        WEB -. autenticación .-> IDP["Gestión de<br/>identidades<br/>Keycloak"]
+    end
+
+    API --> OUT["Productos<br/>PDF · TELEX / NAVTEX<br/>GML S-124 · SECOM · correo"]
+```
 
 ---
 
-## 6. Contacto Institucional
+## 5. Reconocimiento de código abierto y licencia
 
-- **Institución:** Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela) — Playa Grande, La Guaira, Venezuela.
-- **Pagina Web:** `www.shn.gob.ve`
-- **Correo Técnico:** `shnti@shn.gob.ve`
-- **Organización GitHub:** [https://github.com/shnve](https://github.com/shnve)
+**PISAC** se basa en los componentes de código abierto del proyecto **PING**, desarrollado originalmente por el **SHOM** (*Service Hydrographique et Océanographique de la Marine*, Francia) bajo la **Licencia Pública de la Unión Europea (EUPL v1.2)** ([texto oficial](https://interoperable-europe.ec.europa.eu/collection/eupl/eupl-text-eupl-12)).
+
+`ping-api` y `ping-web` son *forks* de [`shom-fr/ping-api`](https://github.com/shom-fr/ping-api) y [`shom-fr/ping-web`](https://github.com/shom-fr/ping-web). Incorporan las adaptaciones hidrográficas, cartográficas, lingüísticas y operativas del **SHN Venezuela**, conservan los avisos de autoría originales (© Shom, 2020–2025) y se distribuyen conforme a la licencia **EUPL v1.2**.
+
+---
+
+## 6. Contacto institucional
+
+- **Institución:** Servicio de Hidrografía, Oceanografía, Meteorología y Cartografiado Náutico (SHN Venezuela), Playa Grande, La Guaira, Venezuela.
+- **Página web:** [www.shn.gob.ve](https://www.shn.gob.ve/)
+- **Correo técnico:** `shnti@shn.gob.ve`
+- **GitHub:** [github.com/shnve](https://github.com/shnve)

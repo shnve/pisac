@@ -7,7 +7,7 @@
 
 ## 1. Descripción general
 
-**PISAC** es el sistema institucional del **SHN** de la República Bolivariana de Venezuela para la producción, publicación y difusión de **advertencias náuticas** y **avisos a los navegantes** en los espacios acuáticos bajo jurisdicción nacional.
+**PISAC** es el sistema piloto institucional del **SHN** de la República Bolivariana de Venezuela para la producción, publicación y difusión de **advertencias náuticas** y **avisos a los navegantes** en los espacios acuáticos bajo jurisdicción nacional, el cual inicia su fase de pruebas y validación pre-operacional.
 
 La plataforma forma parte de la transición del SHN al marco **S-100** de la **Organización Hidrográfica Internacional (OHI / IHO)**. Implementa la especificación de producto **IHO S-124 (*Navigational Warnings*)**.
 
